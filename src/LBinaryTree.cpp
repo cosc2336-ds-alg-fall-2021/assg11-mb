@@ -69,7 +69,7 @@ LBinaryTree<Key, Value>::LBinaryTree(int size, const Key keys[], const Value val
   {
     // need to uncomment this after implementing insert so that array
     // based constructor will now work
-    // insert(keys[idx], values[idx]);
+    insert(keys[idx], values[idx]);
   }
 }
 
@@ -187,6 +187,54 @@ void LBinaryTree<Key, Value>::clear(BinaryTreeNode<Key, Value>* node)
 
   // now we can free up this node safely
   delete node;
+}
+
+/** @brief inserts given Key/Value pair into this tree
+ * 
+ * This function will add the given Key/Value pair in order to 
+ * this tree.
+ * 
+ * @param key The Key value of the object to be inserted
+ * 
+ * @param value The value that the Key is associated with
+ */
+template<class Key, class Value>
+void LBinaryTree<Key, Value>::insert(const Key& key, const Value& value)
+{
+  root = insert(root, key, value);
+}
+
+/** @brief private function that does the work of insert()
+ *
+ * This function will recusively find the correct place the given
+ * Key/Value pair needs to be inserted onto this tree.
+ *
+ * @param root this is the pointer value of the node being compared to the
+ *  given Key/Value pair
+ *
+ * @param key The Key value of the object to be inserted
+ *
+ * @param value The value that the Key is associated with
+ */
+template<class Key, class Value>
+BinaryTreeNode<Key, Value>* LBinaryTree<Key, Value>::insert(BinaryTreeNode<Key, Value>* root, const Key& key, const Value& value)
+{
+  if (root == nullptr)
+  {
+    this->size++;
+    return new BinaryTreeNode<Key, Value>(key, value); // make a new Node w/ null branches and return to original tree
+  }
+
+  if (key <= root->getKey())
+  {
+    root->setLeft(insert(root->getLeft(), key, value));
+  }
+  else
+  {
+    root->setRight(insert(root->getRight(), key, value));
+  }
+
+  return root;
 }
 
 /**

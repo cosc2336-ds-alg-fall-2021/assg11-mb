@@ -37,7 +37,7 @@ public:
 
   // adding, accessing and removing values from the binarytree
   virtual void clear() = 0;
-  // virtual void insert(const Key& key, const Value& value) = 0;
+  virtual void insert(const Key& key, const Value& value) = 0;
   // virtual Value remove(const Key& key) = 0;
   // virtual Value find(const Key& key) const = 0;
 

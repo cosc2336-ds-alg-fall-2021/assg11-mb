@@ -44,7 +44,7 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
 
 /** Task 1: Test LBinaryTree insert member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<int, int> test insert member implementation",
           "[task1]")
    {
@@ -83,11 +83,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK( tree.isEmpty() );
    CHECK( tree.str() == "<BinaryTree> size: 0 values: [ ]" );
    }
- */
+ //*/
 
 /** Task 1: Test LBinaryTree insert member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<string, double> test insert member implementation",
           "[task1]")
    {
@@ -134,11 +134,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK( tree.isEmpty() );
    CHECK( tree.str() == "<BinaryTree> size: 0 values: [ ]" );
    }
- */
+ //*/
 
 /** Task 0: Test LBinaryTree construction and basic operations
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<int, int> test tree construction <int,int> using array based constructor",
           "[task0]")
    {
@@ -154,11 +154,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK(tree.str() == "<BinaryTree> size: 8 values: [ 1 2 3 5 10 11 12 15 ]" );
 
    }
- */
+ //*/
 
 /** Task 0 Test LBinaryTree construction and basic operations
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double> using array based constructor",
           "[task0]")
    {
@@ -174,7 +174,7 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK(tree.str() == "<BinaryTree> size: 8 values: [ 1.1 2.2 3.3 5.5 10.1 11.11 12.12 15.15 ]" );
 
    }
- */
+ //*/
 
 /** Task 2: Test LBinaryTree find member function
  */
