@@ -237,6 +237,55 @@ BinaryTreeNode<Key, Value>* LBinaryTree<Key, Value>::insert(BinaryTreeNode<Key, 
   return root;
 }
 
+/** @brief function will find and return a Value associated with given Key
+ *
+ * This function will find the given Key-value in this tree, and will return
+ * the Value object stored in the Node with the found Key-value. if the Key-value
+ * was not found then a BinaryTreeKeyNotFoundException will be thrown.
+ *
+ * @param key Key value associated with the actual Value to be found
+ *
+ * @throws BinaryTreeKeyNotFoundException if the given Key was not found
+ */
+template<class Key, class Value>
+Value LBinaryTree<Key, Value>::find(const Key& key) const
+{
+  return find(root, key)->getValue();
+}
+
+/** @brief recusively finds the given key-value in the tree
+ * 
+ * This function will recursively find the given key-value in this tree.
+ * 
+ * @param root Node value holding the key-value to be compared
+ * 
+ * @param key Key-value being searched for
+ */
+template<class Key, class Value>
+BinaryTreeNode<Key, Value>* LBinaryTree<Key, Value>::find(BinaryTreeNode<Key, Value>* root, const Key& key) const
+{
+  if (root == nullptr)
+  {
+    ostringstream out;
+
+    out << "BinaryTreeKeyNotFoundException: could not find key-value of: " << key << ", in tree:\n\t" << this->str();
+
+    throw BinaryTreeKeyNotFoundException(out.str());
+  }
+  else if (root->getKey() == key)
+  {
+    return root;
+  }
+  else if (key < root->getKey())
+  {
+    return find(root->getLeft(), key);
+  }
+  else
+  {
+    return find(root->getRight(), key);
+  }
+}
+
 /**
  * @brief Cause specific instance compilations
  *

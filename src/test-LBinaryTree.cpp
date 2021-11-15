@@ -178,7 +178,7 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
 
 /** Task 2: Test LBinaryTree find member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<int, int> test search with find member implementation",
           "[task2]")
    {
@@ -205,11 +205,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    // test we get expected exception if try and find key not in the tree
    CHECK_THROWS_AS( tree.find(42), BinaryTreeKeyNotFoundException );
    }
- */
+ //*/
 
 /** Task 2: Test LBinaryTree find member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<string, double> test search with find member implementation",
           "[task2]")
    {
@@ -238,7 +238,7 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    // test we get expected exception if try and find key not in the tree
    CHECK_THROWS_AS( tree.find("thanks-for-the-fish"), BinaryTreeKeyNotFoundException );
    }
- */
+ //*/
 
 /** Task 3: Test private LBinaryTree getMinimum member function
  */

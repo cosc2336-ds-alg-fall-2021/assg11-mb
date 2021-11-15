@@ -39,7 +39,7 @@ public:
   virtual void clear() = 0;
   virtual void insert(const Key& key, const Value& value) = 0;
   // virtual Value remove(const Key& key) = 0;
-  // virtual Value find(const Key& key) const = 0;
+  virtual Value find(const Key& key) const = 0;
 
   // friend functions and friend operators
   template<typename K, typename V>
