@@ -242,7 +242,7 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
 
 /** Task 3: Test private LBinaryTree getMinimum member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<int, int> test private getMinimum member implementation",
           "[task3]")
    {
@@ -306,11 +306,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK( node->getKey() == 1 );
    CHECK( node->getValue() == 1 );
    }
- */
+ //*/
 
 /** Task 3: Test private LBinaryTree getMinimum member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<string, double> test private getMinimum member implementation",
           "[task3]")
    {
@@ -374,7 +374,7 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK( node->getKey() == "alpha" );
    CHECK( node->getValue() == Approx(1.1) );
    }
- */
+ //*/
 
 /** Task 4: Test private LBinaryTree deleteMinimum member function
  */

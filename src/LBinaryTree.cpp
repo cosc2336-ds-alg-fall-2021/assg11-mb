@@ -286,6 +286,28 @@ BinaryTreeNode<Key, Value>* LBinaryTree<Key, Value>::find(BinaryTreeNode<Key, Va
   }
 }
 
+/** @brief will find minimum value of this tree
+ * 
+ * This function will recurssively find the minimum value of this sub-tree.
+ * It will start searching with the given Node pointer.
+ * 
+ * @param root the pointer value at which to begin the search
+ * 
+ * @returns the Node pointer of the minimum value of the sub-tree
+ */
+template<class Key, class Value>
+BinaryTreeNode<Key, Value>* LBinaryTree<Key, Value>::getMinimum(BinaryTreeNode<Key, Value>* root)
+{
+  if (root->getLeft() == nullptr)
+  {
+    return root;
+  }
+  else
+  {
+    return getMinimum(root->getLeft());
+  }
+}
+
 /**
  * @brief Cause specific instance compilations
  *

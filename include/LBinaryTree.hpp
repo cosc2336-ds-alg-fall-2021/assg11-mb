@@ -69,6 +69,7 @@ private:
   void clear(BinaryTreeNode<Key, Value>* node);
   BinaryTreeNode<Key, Value>* insert(BinaryTreeNode<Key, Value>* root, const Key& key, const Value& value);
   BinaryTreeNode<Key, Value>* find(BinaryTreeNode<Key, Value>* root, const Key& key) const;
+  BinaryTreeNode<Key, Value>* getMinimum(BinaryTreeNode<Key, Value>* root);
 };
 
 #endif // define _LBINARYTREE_HPP_
