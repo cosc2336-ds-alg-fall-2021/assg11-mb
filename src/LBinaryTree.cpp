@@ -298,13 +298,35 @@ BinaryTreeNode<Key, Value>* LBinaryTree<Key, Value>::find(BinaryTreeNode<Key, Va
 template<class Key, class Value>
 BinaryTreeNode<Key, Value>* LBinaryTree<Key, Value>::getMinimum(BinaryTreeNode<Key, Value>* root)
 {
-  if (root->getLeft() == nullptr)
+  if (!root->hasLeft())
   {
     return root;
   }
   else
   {
     return getMinimum(root->getLeft());
+  }
+}
+
+/** @brief deletes minimum key-value of subtree
+ * 
+ * This function will recursively find the minimum value of the sub-tree with 
+ * the given root pointer. This function will then return the right-pointer
+ * value of the minimum node.
+ * 
+ * @param root the root pointer of the sub-tree with the minimum value to be deleted
+ */
+template<class Key, class Value>
+BinaryTreeNode<Key, Value>* LBinaryTree<Key, Value>::deleteMinimum(BinaryTreeNode<Key, Value>* root)
+{
+  if (!root->hasLeft())
+  {
+    return root->getRight();
+  }
+  else
+  {
+    root->setLeft(deleteMinimum(root->getLeft()));
+    return root;
   }
 }
 

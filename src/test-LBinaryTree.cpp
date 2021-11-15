@@ -378,7 +378,7 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
 
 /** Task 4: Test private LBinaryTree deleteMinimum member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<int, int> test private deleteMinimum member implementation",
           "[task4]")
    {
@@ -474,11 +474,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    tree.root = node;  // something like this should happen in the remove() function
    CHECK( tree.str() == "<BinaryTree> size: 13 values: [ 15 18 20 ]" );
    }
- */
+ //*/
 
 /** Task 4: Test private LBinaryTree deleteMinimum member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<string, double> test private deleteMinimum member implementation",
           "[task4]")
    {
@@ -574,7 +574,7 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    tree.root = node;  // something like this should happen in the remove() function
    CHECK( tree.str() == "<BinaryTree> size: 13 values: [ 15.15 18.18 20.2 ]" );
    }
- */
+ //*/
 
 /** Task 5: Test LBinaryTree remove member function
  */
