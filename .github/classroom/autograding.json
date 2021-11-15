@@ -1,0 +1,74 @@
+{
+  "tests": [
+    {
+      "name": "test successfully builds",
+      "setup": "./configure",
+      "run": "make",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "task 0 test given BinaryTreeNode and LBinaryTree constructors",
+      "setup": "make",
+      "run": "./test --list-test-names-only [task0] | grep . && ./test [task0]",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "task 1 test LBinaryTree insert() member method",
+      "setup": "make",
+      "run": "./test --list-test-names-only [task1] | grep . && ./test [task1]",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "task 2 test LBinaryTree find() member method",
+      "setup": "make",
+      "run": "./test --list-test-names-only [task2] | grep . && ./test [task2]",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "task 3 test LBinaryTree private getMinimum() helper method",
+      "setup": "make",
+      "run": "./test --list-test-names-only [task3] | grep . && ./test [task3]",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "task 4 test LBinaryTree private deleteMinimum() helper method",
+      "setup": "make",
+      "run": "./test --list-test-names-only [task4] | grep . && ./test [task4]",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "task 5 test LBinaryTree remove() member method",
+      "setup": "make",
+      "run": "./test --list-test-names-only [task5] | grep . && ./test [task5]",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    }
+  ]
+}
