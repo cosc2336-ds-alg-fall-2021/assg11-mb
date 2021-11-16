@@ -330,22 +330,43 @@ BinaryTreeNode<Key, Value>* LBinaryTree<Key, Value>::deleteMinimum(BinaryTreeNod
   }
 }
 
-/** @brief removes the given key and returns it's associated Value
+/** @brief removes the given key and returns the value of the new root
+ *
+ * This function will remove the node with the given Key, and return
+ * the value at the given key.
+ *
+ * @param key the key of the node to be removed from this tree
  * 
+ * @throws BinaryTreeKeyNotFoundException if the key-value is not found in the tree
  */
 template<class Key, class Value>
 Value LBinaryTree<Key, Value>::remove(const Key& key)
 {
-  return remove(root, key)->getValue();
+  Value tempValue = this->find(key);
+  
+  root = remove(root, key);
+
+  return tempValue;
 }
 
 /** @brief actual function that removes a node from this tree
- * 
+ *
+ * This function will recursively search for the given key-value in this
+ * tree and will remove it. This function returns the new root value after
+ * the key-value is found, if it is found. This function will throw an error
+ * if the key-value is not found.
+ *
+ * @param thisNode is the node that will be compared to the key-value and will be
+ *  deleted if the key-values match
+ *
+ * @param key key-value to be searched for and deleted
+ *
+ * @throws BinaryTreeKeyNotFoundException if the key-value is not found in the tree
  */
 template<class Key, class Value>
-BinaryTreeNode<Key, Value>* LBinaryTree<Key, Value>::remove(BinaryTreeNode<Key, Value>* root, const Key& key)
+BinaryTreeNode<Key, Value>* LBinaryTree<Key, Value>::remove(BinaryTreeNode<Key, Value>* thisNode, const Key& key)
 {
-  if (root == nullptr)
+  if (thisNode == nullptr)
   {
     ostringstream out;
 
@@ -353,54 +374,54 @@ BinaryTreeNode<Key, Value>* LBinaryTree<Key, Value>::remove(BinaryTreeNode<Key, 
 
     throw BinaryTreeKeyNotFoundException(out.str());
   }
-  else if (root->getKey() != key)
+  else if (thisNode->getKey() != key)
   {
-    if (key < root->getKey())
+    if (key < thisNode->getKey())
     {
-      root->setLeft(remove(root->getLeft(), key));
-      return root;
+      thisNode->setLeft(remove(thisNode->getLeft(), key));
+      return thisNode;
     }
     else
     {
-      root->setRight(remove(root->getRight(), key));
-      return root;
+      thisNode->setRight(remove(thisNode->getRight(), key));
+      return thisNode;
     }
   }
   else
   {
-    BinaryTreeNode<Key, Value>* tempNode;
+    BinaryTreeNode<Key, Value>* returnNode = thisNode;
 
-    if (!root->hasLeft())
+    if (!thisNode->hasLeft())
     {
-      tempNode = root->getRight();
+      returnNode = thisNode->getRight();
 
-      delete root;
+      thisNode->~BinaryTreeNode();
       this->size--;
 
-      return tempNode;
+      return returnNode;
     }
-    else if (!root->hasRight())
+    else if (!thisNode->hasRight())
     {
-      tempNode = root->getLeft();
+      returnNode = thisNode->getLeft();
 
-      delete root;
+      thisNode->~BinaryTreeNode();
       this->size--;
 
-      return tempNode;
+      return returnNode;
     }
     else
     {
-      BinaryTreeNode<Key, Value>* minRightNode = getMinimum(root->getRight());
+      BinaryTreeNode<Key, Value>* minRightNode = getMinimum(thisNode->getRight());
 
-      root->setKey(minRightNode->getKey());
-      root->setValue(minRightNode->getValue());
+      thisNode->setKey(minRightNode->getKey());
+      thisNode->setValue(minRightNode->getValue());
 
-      root->setRight(deleteMinimum(root->getRight()));
+      returnNode->setRight(deleteMinimum(thisNode->getRight()));
 
-      delete minRightNode;
+      thisNode->~BinaryTreeNode();
       this->size--;
 
-      return root;
+      return returnNode;
     }
   }
 }
