@@ -578,7 +578,7 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
 
 /** Task 5: Test LBinaryTree remove member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<int, int> test remove member implementation",
           "[task5]")
    {
@@ -662,11 +662,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK( tree.isEmpty() );
    CHECK( tree.str() == "<BinaryTree> size: 0 values: [ ]" );
    }
- */
+ //*/
 
 /** Task 5: Test LBinaryTree remove member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<string, double> test remove member implementation",
           "[task5]")
    {
@@ -752,4 +752,4 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK( tree.isEmpty() );
    CHECK( tree.str() == "<BinaryTree> size: 0 values: [ ]" );
    }
- */
+ //*/

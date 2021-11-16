@@ -55,6 +55,7 @@ public:
   void clear();
   void insert(const Key& key, const Value& value);
   Value find(const Key& key) const;
+  Value remove(const Key& key);
 
 private:
   /// @brief The root of this binary tree.  When tree is empty then
@@ -71,6 +72,7 @@ private:
   BinaryTreeNode<Key, Value>* find(BinaryTreeNode<Key, Value>* root, const Key& key) const;
   BinaryTreeNode<Key, Value>* getMinimum(BinaryTreeNode<Key, Value>* root);
   BinaryTreeNode<Key, Value>* deleteMinimum(BinaryTreeNode<Key, Value>* root);
+  BinaryTreeNode<Key, Value>* remove(BinaryTreeNode<Key, Value>* root, const Key& key);
 };
 
 #endif // define _LBINARYTREE_HPP_
