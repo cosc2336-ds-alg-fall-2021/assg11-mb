@@ -44,7 +44,7 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
 
 /** Task 1: Test LBinaryTree insert member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<int, int> test insert member implementation",
           "[task1]")
    {
@@ -83,11 +83,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK( tree.isEmpty() );
    CHECK( tree.str() == "<BinaryTree> size: 0 values: [ ]" );
    }
- */
+ //*/
 
 /** Task 1: Test LBinaryTree insert member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<string, double> test insert member implementation",
           "[task1]")
    {
@@ -134,11 +134,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK( tree.isEmpty() );
    CHECK( tree.str() == "<BinaryTree> size: 0 values: [ ]" );
    }
- */
+ //*/
 
 /** Task 0: Test LBinaryTree construction and basic operations
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<int, int> test tree construction <int,int> using array based constructor",
           "[task0]")
    {
@@ -154,11 +154,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK(tree.str() == "<BinaryTree> size: 8 values: [ 1 2 3 5 10 11 12 15 ]" );
 
    }
- */
+ //*/
 
 /** Task 0 Test LBinaryTree construction and basic operations
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double> using array based constructor",
           "[task0]")
    {
@@ -174,11 +174,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK(tree.str() == "<BinaryTree> size: 8 values: [ 1.1 2.2 3.3 5.5 10.1 11.11 12.12 15.15 ]" );
 
    }
- */
+ //*/
 
 /** Task 2: Test LBinaryTree find member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<int, int> test search with find member implementation",
           "[task2]")
    {
@@ -205,11 +205,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    // test we get expected exception if try and find key not in the tree
    CHECK_THROWS_AS( tree.find(42), BinaryTreeKeyNotFoundException );
    }
- */
+ //*/
 
 /** Task 2: Test LBinaryTree find member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<string, double> test search with find member implementation",
           "[task2]")
    {
@@ -238,11 +238,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    // test we get expected exception if try and find key not in the tree
    CHECK_THROWS_AS( tree.find("thanks-for-the-fish"), BinaryTreeKeyNotFoundException );
    }
- */
+ //*/
 
 /** Task 3: Test private LBinaryTree getMinimum member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<int, int> test private getMinimum member implementation",
           "[task3]")
    {
@@ -306,11 +306,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK( node->getKey() == 1 );
    CHECK( node->getValue() == 1 );
    }
- */
+ //*/
 
 /** Task 3: Test private LBinaryTree getMinimum member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<string, double> test private getMinimum member implementation",
           "[task3]")
    {
@@ -374,11 +374,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK( node->getKey() == "alpha" );
    CHECK( node->getValue() == Approx(1.1) );
    }
- */
+ //*/
 
 /** Task 4: Test private LBinaryTree deleteMinimum member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<int, int> test private deleteMinimum member implementation",
           "[task4]")
    {
@@ -474,11 +474,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    tree.root = node;  // something like this should happen in the remove() function
    CHECK( tree.str() == "<BinaryTree> size: 13 values: [ 15 18 20 ]" );
    }
- */
+ //*/
 
 /** Task 4: Test private LBinaryTree deleteMinimum member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<string, double> test private deleteMinimum member implementation",
           "[task4]")
    {
@@ -574,11 +574,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    tree.root = node;  // something like this should happen in the remove() function
    CHECK( tree.str() == "<BinaryTree> size: 13 values: [ 15.15 18.18 20.2 ]" );
    }
- */
+ //*/
 
 /** Task 5: Test LBinaryTree remove member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<int, int> test remove member implementation",
           "[task5]")
    {
@@ -662,11 +662,11 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK( tree.isEmpty() );
    CHECK( tree.str() == "<BinaryTree> size: 0 values: [ ]" );
    }
- */
+ //*/
 
 /** Task 5: Test LBinaryTree remove member function
  */
-/*
+//*
    TEST_CASE("LBinaryTreeNode<string, double> test remove member implementation",
           "[task5]")
    {
@@ -752,4 +752,4 @@ TEST_CASE("LBinaryTreeNode<string, double> test tree construction <string,double
    CHECK( tree.isEmpty() );
    CHECK( tree.str() == "<BinaryTree> size: 0 values: [ ]" );
    }
- */
+ //*/
